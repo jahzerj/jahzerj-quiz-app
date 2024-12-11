@@ -1,0 +1,12 @@
+:root {
+    /* Light Palette */
+    --primary-color: #cb9df0;
+    --secondary-color: #f0c1e1;
+    --font-color: #fddbbb;
+    --accent-color: #fff9bf;
+
+    /* Dark Palette */
+    --primary-color: #8174A0;
+    --secondary-color:#A888B5;
+    --font-color:#EFB6C8;
+    --accent-color: #FFD2A0;
