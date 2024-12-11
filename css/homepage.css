@@ -1,1 +1,21 @@
- 
+.question-card {
+  height: 200px;
+  width: 100%;
+  border: dashed black;
+  justify-self: center;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .question-card {
+    height: 300px;
+    width: 300px;
+    border: dashed black;
+    justify-self: center;
+    margin: 10px;
+    border-radius: 15px;
+  }
+}
+
+

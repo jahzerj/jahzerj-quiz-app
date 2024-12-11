@@ -1,8 +1,15 @@
-.question-card {
-  height: 200px;
-  width: 80%;
-  border: dashed black;
-  justify-self: center;
-  margin: 10px;
+@import "/css/homepage.css";
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(45, 39, 66);
+    color: beige;
+  }
 }
 
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: paleturquoise;
+    color: rgb(177, 165, 41);
+  }
+}
