@@ -8,15 +8,15 @@
 }
 
 article {
-    position: relative;
+  position: relative;
 }
 
 .bookmark {
   position: absolute;
   right: 0px;
+  top: 0px;
 }
 .question-card {
-  justify-self: center;
   font-size: 2rem;
 }
 
