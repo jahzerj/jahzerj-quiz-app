@@ -8,11 +8,16 @@
 }
 
 article {
-  display: grid;
+    position: relative;
 }
 
 .bookmark {
-  justify-self: flex-end;
+  position: absolute;
+  right: 0px;
+}
+.question-card {
+  justify-self: center;
+  font-size: 2rem;
 }
 
 /* This is for mobile device formatting (ie. the intended format) */
