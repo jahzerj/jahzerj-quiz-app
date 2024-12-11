@@ -20,6 +20,13 @@ article {
   font-size: 2rem;
 }
 
+.footer-nav {
+  background-color: orange;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
 /* This is for mobile device formatting (ie. the intended format) */
 @media screen and (max-width: 600px) {
   .question-card {
