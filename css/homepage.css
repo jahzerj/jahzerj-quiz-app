@@ -7,6 +7,15 @@
   border-radius: 15px;
 }
 
+article {
+  display: grid;
+}
+
+.bookmark {
+  justify-self: flex-end;
+}
+
+/* This is for mobile device formatting (ie. the intended format) */
 @media screen and (max-width: 600px) {
   .question-card {
     height: 300px;
@@ -17,5 +26,3 @@
     border-radius: 15px;
   }
 }
-
-
