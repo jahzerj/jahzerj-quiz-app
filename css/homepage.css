@@ -1,3 +1,7 @@
+div.wrap {
+  width: 960px;
+  margin: 0 auto;
+}
 .main-header {
   position: sticky;
   z-index: 1;
@@ -16,7 +20,7 @@
 h1 {
   font-size: 3rem;
   text-align: center;
-  background-color: var(--secondary-color);
+  background-color: lightcoral;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -62,13 +66,32 @@ article {
 button {
   width: fit-content;
   align-self: center;
-  height: 120px;
-  height: 120px;
+  height: 180px;
+  height: 180px;
   background-color: green;
 }
 button:hover {
   background-color: blue;
   color: white;
+}
+.question--pic {
+  height: 100%;
+  width: 100%;
+}
+.answer--pic {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+#toggle:checked ~ .question--pic {
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+#toggle:checked ~ .answer--pic {
+  height: 100%;
+  width: 100%;
+  display: block;
 }
 ul.categories {
   list-style-type: none; /* Remove bullets */

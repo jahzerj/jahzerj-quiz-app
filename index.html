@@ -7,15 +7,38 @@
     <title>Learning Letters with Unicorns</title>
   </head>
   <body>
+    <!-- makes the page width fixed -->
+    <div class="wrap"></div>
     <header class="main-header">
-      <h1><p class="first tagline">Learning Letters <br> with: <br> UNICORNS!</p></h1>
+      <h1>
+        <p class="first tagline">
+          Learning Letters <br />
+          with: <br />
+          UNICORNS!
+        </p>
+      </h1>
     </header>
     <main class="main-content">
+      <form action="/action_page.php">
+        <input type="checkbox" id="toggle"/>
+        <label for="vehicle1"> FOR TESTING TOGGLE</label><br>
+      </form>
       <section class="card-section">
         <article class="question-card --A">
           <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">Which Letter for Apple?</p>
-          <button class="--A">TAP FOR THE ANSWER!</button>
+          <button class="--A">
+            <img
+              class="question--pic"
+              src="./images_1/Unicorn_with_apple.webp"
+              alt="Unicorn with an apple"
+            />
+            <img
+              src="./images_2/unicornA.webp"
+              alt="Unicorn_with_A"
+              class="answer--pic"
+            />
+          </button>
           <ul class="categories">
             <li class="category">#food</li>
             <li class="category">#consonant</li>
