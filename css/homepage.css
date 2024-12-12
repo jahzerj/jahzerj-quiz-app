@@ -55,6 +55,7 @@ article {
   position: absolute;
   right: 0px;
   top: 0px;
+  /* need to make this a button */
 }
 .bookmark:hover {
   background-color: aqua;
@@ -75,23 +76,23 @@ button:hover {
   color: white;
 }
 .question--pic {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
 }
-/* .answer--pic {
-  height: 100%;
-  width: 100%;
+.answer--pic {
+  height: 50%;
+  width: 50%;
   display: none;
 }
 #toggle:checked ~ .question--pic {
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 50%;
   display: none;
 }
 #toggle:checked ~ .answer--pic {
-  height: 100%;
-  width: 100%;
-  display: block; */
+  height: 50%;
+  width: 50%;
+  display: block;
 }
 ul.categories {
   list-style-type: none; /* Remove bullets */
