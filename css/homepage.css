@@ -1,0 +1,35 @@
+.question-card {
+  height: 200px;
+  width: 100%;
+  border: dashed black;
+  justify-self: center;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+article {
+  position: relative;
+}
+
+.bookmark {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: var(--accent-color);
+}
+.question-card {
+  font-size: 2rem;
+  background-color: var(--secondary-color);
+}
+
+/* This is for mobile device formatting (ie. the intended format) */
+@media screen and (max-width: 600px) {
+  .question-card {
+    height: 300px;
+    width: 300px;
+    border: dashed black;
+    justify-self: center;
+    margin: 10px;
+    border-radius: 15px;
+  }
+}
