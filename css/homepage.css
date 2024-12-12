@@ -32,7 +32,9 @@ article {
   position: absolute;
   right: 0px;
   top: 0px;
-  color: var(--accent-color);
+}
+.bookmark:hover {
+  background-color: aqua;
 }
 .question {
   margin-top: 60px;
