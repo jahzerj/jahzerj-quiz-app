@@ -78,7 +78,7 @@ button:hover {
   height: 100%;
   width: 100%;
 }
-.answer--pic {
+/* .answer--pic {
   height: 100%;
   width: 100%;
   display: none;
@@ -91,7 +91,7 @@ button:hover {
 #toggle:checked ~ .answer--pic {
   height: 100%;
   width: 100%;
-  display: block;
+  display: block; */
 }
 ul.categories {
   list-style-type: none; /* Remove bullets */
