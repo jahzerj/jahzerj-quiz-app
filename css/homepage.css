@@ -1,19 +1,27 @@
+.main-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100%;
+}
+
 .main-content {
   display: flex;
   flex-direction: column;
 }
 
-.main-header {
-  position: sticky;
-  z-index: 1;
-}
-
 h1 {
-  align-self: center;
   font-size: 3rem;
   text-align: center;
   background-color: var(--secondary-color);
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
+
 article {
   position: relative;
 }
@@ -26,7 +34,7 @@ article {
 }
 
 .question-card {
-  font-size: 2rem;
+  font-size: 20px;
   background-color: var(--secondary-color);
   text-align: center;
   display: flex;
