@@ -6,17 +6,21 @@
 } */
 
 .prof-header {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: space-evenly;
-
 }
 
-.picturebox {
-    border: 5px solid;
-    width: fit-content;
+.picture-box {
+  border: 2px solid;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  align-self: center;
+  border-radius: 50%;
 }
 
-.prof-name {
-    justify-self: center;
+.profile {
+  display: flex;
+  flex-direction: row;
 }
