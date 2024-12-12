@@ -1,4 +1,4 @@
-A - Apple / food
+<!-- A - Apple / food
 B - Ball / thing
 C - Car / thing
 D - Dog / animal
@@ -23,4 +23,6 @@ V - Veggies / food
 W - Watermelon / food
 X - Xylophone / thing
 Y - Yogurt / food
-Z - Zebra / animal
+Z - Zebra / animal -->
+
+<!-- This is for the branched more complicated version of the app.  -->
