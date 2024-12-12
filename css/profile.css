@@ -1,0 +1,11 @@
+.profile-picture {
+  align-self: flex-start;
+}
+
+.profile {
+  border-radius: 60%;
+  border: 2px brown;
+  background-color: green;
+  align-self: flex-start;
+  width: 30%;
+}

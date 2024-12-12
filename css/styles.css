@@ -1,6 +1,6 @@
 @import "./homepage.css";
 @import "./global.css";
-@import "./profilepage.css";
+@import "./profile.css";
 
 @media screen and (prefers-color-scheme: dark) {
   body {
