@@ -1,7 +1,7 @@
-@import "/css/homepage.css";
-@import "/css/global.css";
-@import "/css/bookmarkpage.css";
-@import "/css/profilepage.css";
+@import "./homepage.css";
+@import "./global.css";
+@import "./bookmarkpage.css";
+@import "./profilepage.css";
 
 @media screen and (prefers-color-scheme: dark) {
   body {
