@@ -1,7 +1,9 @@
+/* Adding div to make maximum length of page. */
 div.wrap {
   width: 960px;
   margin: 0 auto;
 }
+/* Header scrolls above cards. */
 .main-header {
   position: sticky;
   z-index: 1;
@@ -12,11 +14,13 @@ div.wrap {
   width: 100%;
 }
 
+/* Make main content a flexbox. */
 .main-content {
   display: flex;
   flex-direction: column;
 }
 
+/* Optional and extra rainbow gradient. */
 h1 {
   text-align: center;
   background: linear-gradient(
@@ -36,11 +40,11 @@ h1 {
   margin: 0;
   width: 100%;
 }
-
+/* lets you fix the bookmark within the cards */
 article {
   position: relative;
 }
-
+/* Column flexbox so each item in cards is stacked upon each other */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -54,8 +58,8 @@ article {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 500px;
   width: 100%;
+  height: auto;
   box-shadow: 0px 10px 13px -7px lightcoral;
   align-self: center;
   margin: 10px;
@@ -123,7 +127,6 @@ li.category {
   .question-card {
     height: 300px;
     width: 300px;
-    /* justify-self: center; */
     margin: 10px;
     border-radius: 15px;
   }
