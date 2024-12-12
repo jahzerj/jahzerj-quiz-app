@@ -1,0 +1,45 @@
+/* .profile {
+  border-radius: 50%;
+  border: 2px solid rgb(184, 37, 147);
+  position: fixed;
+  width: fit-content;
+} */
+
+.prof-header {
+  display: block;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.picture-box {
+  border: 2px solid;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.profile-picture {
+  align-self: center;
+  justify-self: center;
+  height: 40px;
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+.prof-name {
+  font-size: 30px;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
