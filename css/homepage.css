@@ -15,9 +15,11 @@ article {
   position: absolute;
   right: 0px;
   top: 0px;
+  color: var(--accent-color);
 }
 .question-card {
   font-size: 2rem;
+  background-color: var(--secondary-color);
 }
 
 /* This is for mobile device formatting (ie. the intended format) */
