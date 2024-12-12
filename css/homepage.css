@@ -23,6 +23,21 @@ article {
   text-align: center;
 }
 
+ul.categories {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  display: flex;
+}
+
+li.category {
+  justify-content: space-evenly;
+  border: solid;
+  margin: 10px;
+  bottom: 0px;
+  position:static;
+}
+
 .footer-nav {
   background-color: var(--secondary-color);
   height: 50px;

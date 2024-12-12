@@ -12,7 +12,7 @@
 
 @media screen and (prefers-color-scheme: light) {
   body {
-    background-color: paleturquoise;
-    color: rgb(177, 165, 41);
+    background-color: #cb9df0;
+    color: #fddbbb;
   }
 }
