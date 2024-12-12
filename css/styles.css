@@ -1,6 +1,5 @@
 @import "./homepage.css";
 @import "./global.css";
-@import "./bookmarkpage.css";
 @import "./profilepage.css";
 
 @media screen and (prefers-color-scheme: dark) {
