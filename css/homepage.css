@@ -1,14 +1,31 @@
-.question-card {
-  height: 200px;
-  width: 100%;
-  border: dashed blue;
+h2 {
   justify-self: center;
-  margin: 10px;
-  border-radius: 15px;
+  font-size: 3rem;
 }
 
 article {
   position: relative;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0px;
+}
+
+.question-card {
+  font-size: 2rem;
+  background-color: var(--secondary-color);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 100%;
+  /* border: dashed blue; */
+  justify-self: center;
+  margin: 10px;
+  border-radius: 15px;
 }
 
 .bookmark {
@@ -17,25 +34,32 @@ article {
   top: 0px;
   color: var(--accent-color);
 }
-.question-card {
-  font-size: 2rem;
-  background-color: var(--secondary-color);
-  text-align: center;
+.question {
+  margin-top: 60px;
+  margin-bottom: 0px;
 }
-
+button {
+  width: fit-content;
+  align-self: center;
+  height: 40%;
+}
 ul.categories {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
-  display: flex;
+  justify-content: end;
 }
 
 li.category {
-  justify-content: space-evenly;
-  border: solid;
+  border: solid var(--accent-color);
+  background-color: var(--primary-color);
   margin: 10px;
+  width: fit-content;
+  font-size: 16px;
+  border-radius: 5px;
+  position: static;
+  display: inline;
   bottom: 0px;
-  position:static;
 }
 
 .footer-nav {
@@ -50,8 +74,7 @@ li.category {
   .question-card {
     height: 300px;
     width: 300px;
-    border: dashed black;
-    justify-self: center;
+    /* justify-self: center; */
     margin: 10px;
     border-radius: 15px;
   }
