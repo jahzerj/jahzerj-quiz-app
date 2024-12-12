@@ -1,7 +1,7 @@
 .question-card {
   height: 200px;
   width: 100%;
-  border: dashed black;
+  border: dashed blue;
   justify-self: center;
   margin: 10px;
   border-radius: 15px;
@@ -20,19 +20,16 @@ article {
 .question-card {
   font-size: 2rem;
   background-color: var(--secondary-color);
+  text-align: center;
 }
 
 .footer-nav {
-  background-color: orange;
+  background-color: var(--secondary-color);
   height: 50px;
   display: flex;
   justify-content: space-evenly;
-  color: purple;
 }
 
-.nav--house {
-  color: purple;
-}
 /* This is for mobile device formatting (ie. the intended format) */
 @media screen and (max-width: 600px) {
   .question-card {
