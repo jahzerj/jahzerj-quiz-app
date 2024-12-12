@@ -16,11 +16,30 @@
   width: 40px;
   height: 40px;
   margin: 10px;
-  align-self: center;
+  padding: 10px;
   border-radius: 50%;
 }
-
+.profile-picture {
+  align-self: center;
+  justify-self: center;
+  height: 40px;
+}
 .profile {
   display: flex;
   flex-direction: row;
+}
+.prof-name {
+  font-size: 30px;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
 }
