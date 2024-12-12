@@ -14,12 +14,6 @@ div.wrap {
   width: 100%;
 }
 
-/* Make main content a flexbox. */
-.main-content {
-  display: flex;
-  flex-direction: column;
-}
-
 /* Optional and extra rainbow gradient. */
 h1 {
   text-align: center;
