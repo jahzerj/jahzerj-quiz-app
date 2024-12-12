@@ -22,6 +22,17 @@ article {
   background-color: var(--secondary-color);
 }
 
+.footer-nav {
+  background-color: orange;
+  height: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  color: purple;
+}
+
+.nav--house {
+  color: purple;
+}
 /* This is for mobile device formatting (ie. the intended format) */
 @media screen and (max-width: 600px) {
   .question-card {
