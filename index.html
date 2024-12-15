@@ -19,7 +19,7 @@
     <main class="main-content">
       <section class="card-section"></section>
         <article class="question-card --A">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
           <p class="question">Which letter does APPLE start with?</p>
           <button class="image-button" onclick="toggleImage(this, 0)">
             <img src="./images_1/Unicorn_with_apple.webp" alt="Unicorn with an apple" class='click-image'>
@@ -86,6 +86,42 @@
         </article>
       </section>
     </main>
+    <script defer>
+      // Array to track active cards
+      const activeCards =[];
+
+      // Function to toggle bookmark and active state
+      function toggleBookmark(bookmark, cardIndex) {
+        const card = bookmark.closest(".question-card");
+
+        // Toggle the bookmark icon
+        if (bookmark.src.includes("bookmark.svg")) {
+          bookmark.src = "./assets/bookmark-filled.svg";
+        } else {
+          bookmark.src = "./assets/bookmark.svg";
+        }    
+
+        // Toggle the active state of the card
+        if (card.classList.contains("active")) {
+          card.classList.remove("active");
+
+        // Remove card index from activeCards
+        const index = activeCards.indexOf(cardIndex);
+        if (index > -1) {
+          activeCards.splice(index, 1);
+        }
+      } else {
+        card.classList.add("active");
+
+        // Add card index to activeCards
+        if (!activeCards.includes(cardIndex)) {
+          activeCards.push(cardIndex);
+        }
+      }
+
+      console.log("Active cards:", activeCards); // Debugging active card indices
+    }
+    </script>
   </body>
   <footer class="main-footer">
     <nav class="footer-nav">
@@ -105,7 +141,7 @@
       </a>
     </nav>
   </footer>
-  <script>
+  <script defer>
     // Define image arrays
     const originalImages = [
       "images_1/Unicorn_with_apple.webp",
