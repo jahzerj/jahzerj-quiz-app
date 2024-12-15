@@ -115,4 +115,6 @@ li.category {
   height: 50px;
   display: flex;
   justify-content: space-evenly;
+  maring-top: 2px;
+  position: relative;
 }
