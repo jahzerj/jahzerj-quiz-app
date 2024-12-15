@@ -9,16 +9,20 @@
   <body>
     <!-- makes the page width fixed -->
     <div class="wrap"></div>
+    
     <header class="main-header">
       <h1>
         <p class="quiz-name">Unicorn Quiz</p>
       </h1>
-    </header>
+    </header>     
+    </div>
     <main class="main-content">
         <article class="question-card --A">
           <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">What does the word "Unicorn" mean?</p>
-          <button class="--A"> TAP FOR THE ANSWER</button>
+          <button class="image-button" onclick="toggleImage(this, 0)">
+            <img src="./images_1/Unicorn_with_apple.webp" alt="Unicorn with an apple" width="100%" height="100%">
+          </button>
           <p class="answer--index">Unicorn means 1 horn!</p>
           <ul class="categories">
             <li class="category">#learning</li>
@@ -32,7 +36,10 @@
             width="50px"
           />
           <p class="question">True or False? All unicorns are white.</p>
-          <button class="--B">TAP FOR THE ANSWER!</button>
+          <article class="question-card --B">
+            <button class="image-button" onclick="toggleImage(this, 1)">
+              <img src="./images_1/Unicorn_with_ball.webp" alt="Unicorn with a ball" width="100%" height="100%">
+            </button>
           <p class="answer--index">False! unicorns come in many colors!</p>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
@@ -46,7 +53,9 @@
             width="50px"
           />
           <p class="question">True or False? There are Unicorns in My Little Pony. </p>
-          <button class="--C">TAP FOR THE ANSWER!</button>
+          <button class="image-button" onclick="toggleImage(this, 2)">
+            <img src="./images_1/Unicorn_with_car.webp" alt="Unicorn with a car" width="100%" height="100%">
+          </button>
           <p class="answer--index">True! There are at least 10 different unicorns in My Little Pony.</p>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
@@ -131,5 +140,32 @@
       </a>
     </nav>
   </footer>
-  <script src='./index.js' defer></script>
+  <script>
+    // Define image arrays
+    const originalImages = [
+      "./images_1/Unicorn_with_apple.webp",
+      "./images_1/Unicorn_with_ball.webp",
+      "./images_1/Unicorn_with_car.webp"
+    ];
+  
+    const alternateImages = [
+      "./images_2/unicornA.webp",
+      "./images_2/unicornB.webp",
+      "./images_2/unicornC.webp"
+    ];
+
+    // Function to toggle images
+    function toggleImage(button, index) {
+      const img = button.querySelector("img");
+  
+      // Toggle the image source
+      if (img.src.includes(originalImages[index])) {
+        img.src = alternateImages[index];
+        img.alt = `Alternate image ${index + 1}`;
+      } else {
+        img.src = originalImages[index];
+        img.alt = `Original image ${index + 1}`;
+      }
+    }
+  </script>
 </html>
