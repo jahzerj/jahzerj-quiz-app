@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Unicorn Quiz!</title>
   </head>
-  <body>
+  <body width="600px">
     <!-- makes the page width fixed -->
     <div class="wrap"></div>
     
@@ -17,6 +17,7 @@
     </header>     
     </div>
     <main class="main-content">
+      <section class="card-section"></section>
         <article class="question-card --A">
           <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">What does the word "Unicorn" mean?</p>
@@ -30,16 +31,11 @@
           </ul>
         </article>
         <article class="question-card --B">
-          <img
-            class="bookmark"
-            src="./assets/bookmark-filled.svg"
-            width="50px"
-          />
+          <img class="bookmark" src="./assets/bookmark-filled.svg" width="50px" />
           <p class="question">True or False? All unicorns are white.</p>
-          <article class="question-card --B">
-            <button class="image-button" onclick="toggleImage(this, 1)">
+          <button class="image-button" onclick="toggleImage(this, 1)">
               <img src="./images_1/Unicorn_with_ball.webp" alt="Unicorn with a ball" width="100%" height="100%">
-            </button>
+          </button>
           <p class="answer--index">False! unicorns come in many colors!</p>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
@@ -47,11 +43,7 @@
           </ul>
         </article>
         <article class="question-card --C">
-          <img
-            class="bookmark"
-            src="./assets/bookmark-filled.svg"
-            width="50px"
-          />
+          <img class="bookmark" src="./assets/bookmark-filled.svg" width="50px" />
           <p class="question">True or False? There are Unicorns in My Little Pony. </p>
           <button class="image-button" onclick="toggleImage(this, 2)">
             <img src="./images_1/Unicorn_with_car.webp" alt="Unicorn with a car" width="100%" height="100%">
@@ -62,65 +54,30 @@
             <li class="category">#pop-culture</li>
           </ul>
         </article>
-      </article>
-      <article class="question-card --D">
-        <img
-          class="bookmark"
-          src="./assets/bookmark.svg"
-          width="50px"
-        />
-        <p class="question">Who first wrote about unicorns?</p>
-        <button class="image-button" onclick="toggleImage(this, 3)">
+        <article class="question-card --D">
+          <img class="bookmark" src="./assets/bookmark-filled.svg" width="50px" />
+          <p class="question">Who first wrote about unicorns?</p>
+          <button class="image-button" onclick="toggleImage(this, 3)">
           <img src="./images_1/Unicorn_with_dog.webp" alt="Unicorn with a dog" width="100%" height="100%">
-        </button>
-        <p class="answer--index">The ancient Greeks not only believed unicorns were real, they thought they could be found in India.  </p>
-        <ul class="categories">
-          <li class="category">#history</li>
-          <li class="category">#funfact</li>
-        </ul>
-      </article>
-      <article class="question-card --E">
-        <img
-          class="bookmark"
-          src="./assets/bookmark-filled.svg"
-          width="50px"
-        />
-        <p class="question">Which real life animal has a horn like a unicorn?</p>
-        <button class="--E">TAP FOR THE ANSWER!</button>
-        <p class="answer--index">Narwhals!</p>
-        <ul class="categories">
-          <li class="category">#funfact</li>
-          <li class="category">#animals</li>
-        </ul>
-      </article>
-      <article class="question-card --F">
-        <img
-          class="bookmark"
-          src="./assets/bookmark.svg"
-          width="50px"
-        />
-        <p class="question">Which part of the UK has a unicorn as it's national animal?</p>
-        <button class="--F">TAP FOR THE ANSWER!</button>
-        <p class="answer--index">The unicorn is, in fact, Scotlands national animal.</p>
-        <ul class="categories">
-          <li class="category">#funfact</li>
-          <li class="category">#history</li>
-        </ul>
-      </article>
-      <article class="question-card --G">
-        <img
-          class="bookmark"
-          src="./assets/bookmark.svg"
-          width="50px"
-        />
-        <p class="question">What natural phenomenon is most likely caused by unicorns?</p>
-        <button class="--G">TAP FOR THE ANSWER!</button>
-        <p class="answer--index">Though yet unproven; there is strong reason to believe that unicorns create rainbows.</p>
-        <ul class="categories">
-          <li class="category">#silly</li>
-          <li class="category">#basic</li>
-        </ul>
-      </article>
+          </button>
+          <p class="answer--index">The ancient Greeks not only believed unicorns were real, they thought they could be found in India.  </p>
+          <ul class="categories">
+            <li class="category">#history</li>
+            <li class="category">#funfact</li>
+          </ul>
+        </article>
+        <article class="question-card --E">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <p class="question">Question 5?</p>
+          <button class="image-button" onclick="toggleImage(this, 4)">
+          <img src="./images_1/Unicorn_with_elephant.webp" alt="Unicorn with an elephant" width="100%" height="100%">
+          </button>
+          <p class="answer--index">The ancient Greeks not only believed unicorns were real, they thought they could be found in India.  </p>
+          <ul class="categories">
+            <li class="category">#history</li>
+            <li class="category">#funfact</li>
+          </ul>
+        </article>
       </section>
     </main>
   </body>
@@ -147,23 +104,27 @@
     const originalImages = [
       "./images_1/Unicorn_with_apple.webp",
       "./images_1/Unicorn_with_ball.webp",
-      "./images_1/Unicorn_with_car.webp"
-      "./images_1/Unicorn_with_dog",
+      "./images_1/Unicorn_with_car.webp",
+      "./images_1/Unicorn_with_dog.webp"
     ];
   
     const alternateImages = [
       "./images_2/unicornA.webp",
       "./images_2/unicornB.webp",
-      "./images_2/unicornC.webp"
+      "./images_2/unicornC.webp",
       "./images_2/unicornD.webp"
     ];
 
     // Function to toggle images
     function toggleImage(button, index) {
       const img = button.querySelector("img");
-  
+      // Debugging: Check the current `src` of the image and the expected paths
+      console.log("Current img.src:", img.src);
+      console.log("Expected original:", originalImages[index]);
+      console.log("Expected alternate:", alternateImages[index]);
+
       // Toggle the image source
-      if (img.src.includes(originalImages[index])) {
+      if (img.src.endsWith(originalImages[index])) {
         img.src = alternateImages[index];
         img.alt = `Alternate image ${index + 1}`;
       } else {

@@ -54,8 +54,8 @@ article {
   text-align: center;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: auto;
+  height: 320px;
+  width: 320px;
   box-shadow: 0px 10px 13px -7px lightcoral;
   align-self: center;
   margin: 10px;
@@ -85,7 +85,7 @@ button {
   height: 200px;
   color: lightcoral;
   border: none;
-  transition: all .2s ease-in-out
+  transition: all 0.2s ease-in-out;
 }
 
 button:hover {
@@ -115,14 +115,4 @@ li.category {
   height: 50px;
   display: flex;
   justify-content: space-evenly;
-}
-
-/* This is for mobile device formatting (ie. the intended format) */
-@media screen and (max-width: 600px) {
-  .question-card {
-    height: 300px;
-    width: 300px;
-    margin: 10px;
-    border-radius: 15px;
-  }
 }
