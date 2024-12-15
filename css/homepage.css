@@ -80,16 +80,16 @@ article {
 }
 button {
   align-self: center;
-  justify-self: center;
   background-color: var(--primary-color);
   width: 200px;
   height: 200px;
   color: lightcoral;
+  border: none;
+  transition: all .2s ease-in-out
 }
 
 button:hover {
-  background-color: blue;
-  color: white;
+  transform: scale(1.05);
 }
 
 ul.categories {
