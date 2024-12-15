@@ -34,10 +34,12 @@ h1 {
   margin: 0;
   width: 100%;
 }
+
 /* lets you fix the bookmark within the cards */
 article {
   position: relative;
 }
+
 /* Column flexbox so each item in cards is stacked upon each other */
 .main-content {
   display: flex;
@@ -77,12 +79,11 @@ article {
   margin-bottom: 0px;
 }
 button {
-  width: fit-content;
   align-self: center;
   justify-self: center;
   background-color: var(--primary-color);
-  width: 180px;
-  height: 90px;
+  width: 200px;
+  height: 200px;
   color: lightcoral;
 }
 
