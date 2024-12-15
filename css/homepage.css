@@ -75,7 +75,7 @@ article {
   /* need to make this a button */
 }
 .bookmark:hover {
-  background-color: aqua;
+  transform: scale(1.05);
 }
 .question {
   margin-top: 60px;
@@ -118,6 +118,6 @@ li.category {
   height: 50px;
   display: flex;
   justify-content: space-evenly;
-  maring-top: 2px;
+  margin-top: 2px;
   position: relative;
 }
