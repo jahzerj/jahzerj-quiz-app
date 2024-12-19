@@ -31,6 +31,7 @@ h1 {
   height: 50px;
   padding-top: 10px;
 }
+
 /* Column flexbox so each item in cards is stacked upon each other */
 .main-content {
   display: flex;

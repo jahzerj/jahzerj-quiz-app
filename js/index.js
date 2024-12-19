@@ -1,71 +1,54 @@
+const button = document.querySelector('[data-js="bookmark"]');
 
+// Define image arrays
+const originalImages = [
+  "images_1/Unicorn_with_apple.webp",
+  "images_1/Unicorn_with_ball.webp",
+  "images_1/Unicorn_with_car.webp",
+  "images_1/Unicorn_with_dog.webp",
+  "images_1/unicorn_with_elephant.webp",
+  "images_1/unicorn_with_fish.webp",
+];
 
+const alternateImages = [
+  "images_2/unicornA.webp",
+  "images_2/unicornB.webp",
+  "images_2/unicornC.webp",
+  "images_2/unicornD.webp",
+  "images_2/unicornE.webp",
+  "images_2/unicornF.webp",
+];
 
-    // Define image arrays
-    const originalImages = [
-      "images_1/Unicorn_with_apple.webp",
-      "images_1/Unicorn_with_ball.webp",
-      "images_1/Unicorn_with_car.webp",
-      "images_1/Unicorn_with_dog.webp",
-      "images_1/unicorn_with_elephant.webp",
-      "images_1/unicorn_with_fish.webp",
-    ];
+document.querySelectorAll(".click-image").forEach((image) => {
+  image.addEventListener("click", () => {
+    console.log("Image clicked:", image);
+    const currentSrc = image.getAttribute("src");
+    const initialSrc = image.getAttribute("data-initial");
+    const letterSrc = image.getAttribute("data-letter");
+    image.setAttribute(
+      "src",
+      currentSrc === initialSrc ? letterSrc : initialSrc
+    );
+  });
+});
 
-    const alternateImages = [
-      "images_2/unicornA.webp",
-      "images_2/unicornB.webp",
-      "images_2/unicornC.webp",
-      "images_2/unicornD.webp",
-      "images_2/unicornE.webp",
-      "images_2/unicornF.webp",
-    ];
+document.querySelectorAll(".bookmark").forEach((bookmark) => {
+  bookmark.addEventListener("click", () => {
+    const currentSrc = bookmark.getAttribute("src");
+    const initialSrc = bookmark.getAttribute("data-initial");
+    const toggledSrc = bookmark.getAttribute("data-toggled");
 
-    // Function to toggle images
-    function toggleImage(button, index) {
-      const img = button.querySelector("img");
+    // Debugging logs
+    console.log("Current Bookmark Src:", currentSrc);
+    console.log(
+      "Switching Bookmark Src to:",
+      currentSrc === initialSrc ? toggledSrc : initialSrc
+    );
 
-      // Toggle the image source
-      if (img.src.endsWith(originalImages[index])) {
-        img.src = alternateImages[index];
-        img.alt = `Alternate image ${index + 1}`;
-      } else {
-        img.src = originalImages[index];
-        img.alt = `Original image ${index + 1}`;
-      }
-    }
-
-
-// Array to track active cards
-const activeCards = [];
-
-// Function to toggle bookmark and active state
-function toggleBookmark(bookmark, cardIndex) {
-  const card = bookmark.closest(".question-card");
-
-  // Toggle the bookmark icon
-  if (bookmark.src.includes("bookmark.svg")) {
-    bookmark.src = "./assets/bookmark-filled.svg";
-  } else {
-    bookmark.src = "./assets/bookmark.svg";
-  }
-
-  // Toggle the active state of the card
-  if (card.classList.contains("active")) {
-    card.classList.remove("active");
-
-    // Remove card index from activeCards
-    const index = activeCards.indexOf(cardIndex);
-    if (index > -1) {
-      activeCards.splice(index, 1);
-    }
-  } else {
-    card.classList.add("active");
-
-    // Add card index to activeCards
-    if (!activeCards.includes(cardIndex)) {
-      activeCards.push(cardIndex);
-    }
-  }
-
-  console.log("Active cards:", activeCards); // Debugging active card indices
-}
+    // Toggle image source
+    bookmark.setAttribute(
+      "src",
+      currentSrc === initialSrc ? toggledSrc : initialSrc
+    );
+  });
+});
