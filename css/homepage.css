@@ -29,26 +29,29 @@ h1 {
   margin: 0;
   width: 100%;
   height: 50px;
-}
-
-card {
-  position: relative;
-  justify-self: center;
-  margin-bottom: 2px;
-}
-
-.bookmark {
-  width: 50px;
+  padding-top: 10px;
 }
 /* Column flexbox so each item in cards is stacked upon each other */
 .main-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 30px;
+  margin-bottom: 50px;
 }
 
-.question-card {
+.bookmark {
+  width: 50px;
+  position: absolute;
+  right: 0px;
+  /*lets makes this a button*/
+}
+.bookmark:hover {
+  transform: scale(1.05);
+}
+
+/* Formatting Question Cards */
+card {
+  position: relative;
+  justify-self: center;
   font-size: 20px;
   background-color: var(--secondary-color);
   text-align: center;
@@ -56,40 +59,30 @@ card {
   flex-direction: column;
   height: 320px;
   width: 320px;
-  box-shadow: 0px 10px 13px -7px lightcoral;
-  align-self: center;
   margin: 10px;
   border-radius: 15px;
+  box-shadow: 0px 10px 13px -7px lightcoral;
+  padding: 5px;
 }
-
+/* Makes the qustion appear under the 50px bookmark*/
+.question {
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+/* Makes the image fit inside the button 100%, absolutely necessary*/
 .click-image {
   width: 100%;
   height: 100%;
 }
-.answer--index {
-  display: none;
-}
-.bookmark {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  /* need to make this a button */
-}
-.bookmark:hover {
-  transform: scale(1.05);
-}
-.question {
-  margin-top: 60px;
-  margin-bottom: 0px;
-}
+
 button {
   align-self: center;
   background-color: var(--primary-color);
   width: 200px;
   height: 200px;
-  color: lightcoral;
   border: none;
   transition: all 0.2s ease-in-out;
+  padding: 0px;
 }
 
 button:hover {
@@ -101,17 +94,17 @@ ul.categories {
   padding: 0; /* Remove padding */
   margin: 5px; /* Remove margins */
   align-content: flex-end;
+  bottom: 20px;
 }
 
 li.category {
   border: solid var(--font-color) 2px;
   background-color: var(--primary-color);
   margin: 10px;
-  width: fit-content;
-  font-size: 16px;
+  font-size: 20px;
   border-radius: 5px;
   display: inline;
-  align-content: left;
+  padding: 1px;
 }
 
 .footer-nav {
@@ -124,7 +117,6 @@ li.category {
 }
 .nav--head,
 .nav--house,
-.nav--bookmark
- {
+.nav--bookmark {
   height: 50px;
 }
