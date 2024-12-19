@@ -13,7 +13,7 @@
     <main class="main-content">
       <section class="card-section">
         <card class="question-card --A">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <p class="question">Which letter does APPLE start with?</p>
           <button class="image-button">
             <img
@@ -28,7 +28,7 @@
           </ul>
         </card>
         <card class="question-card --B">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <p class="question">Which letter does BALL start with?</p>
           <button class="image-button">
             <img
@@ -43,7 +43,7 @@
           </ul>
         </card>
         <card class="question-card --C">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <question class="question"
             >Which letter does CAR start with?</question
           >
@@ -60,7 +60,7 @@
           </ul>
         </card>
         <card class="question-card --D">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <question class="question"
             >Which letter does DOG start with?</question
           >
@@ -77,7 +77,7 @@
           </ul>
         </card>
         <card class="question-card --E">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <question class="question"
             >Which letter does ELEPHANT start with?</question
           >
@@ -94,7 +94,7 @@
           </ul>
         </card>
         <card class="question-card --F">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <img class="bookmark" src="./assets/bookmark.svg" />
           <p class="question">Which letter does FISH start with?</p>
           <button class="image-button" onclick="toggleImage(this, 5)">
             <img
@@ -110,98 +110,22 @@
         </card>
       </section>
     </main>
-    <script defer>
-      // Array to track active cards
-      const activeCards = [];
-
-      // Function to toggle bookmark and active state
-      function toggleBookmark(bookmark, cardIndex) {
-        const card = bookmark.closest(".question-card");
-
-        // Toggle the bookmark icon
-        if (bookmark.src.includes("bookmark.svg")) {
-          bookmark.src = "./assets/bookmark-filled.svg";
-        } else {
-          bookmark.src = "./assets/bookmark.svg";
-        }
-
-        // Toggle the active state of the card
-        if (card.classList.contains("active")) {
-          card.classList.remove("active");
-
-          // Remove card index from activeCards
-          const index = activeCards.indexOf(cardIndex);
-          if (index > -1) {
-            activeCards.splice(index, 1);
-          }
-        } else {
-          card.classList.add("active");
-
-          // Add card index to activeCards
-          if (!activeCards.includes(cardIndex)) {
-            activeCards.push(cardIndex);
-          }
-        }
-
-        console.log("Active cards:", activeCards); // Debugging active card indices
-      }
-    </script>
   </body>
   <footer class="main-footer">
     <nav class="footer-nav">
       <a class="footer-link" href="#">
-        <img
-          class="nav--house"
-          src="./assets/house-filled.svg"
-          width="50px"
-          alt=""
-        />
+        <img class="nav--house" src="./assets/house-filled.svg" alt="Home" />
       </a>
       <a class="footer-link" href="./bookmark.html">
         <img
           class="nav--bookmark"
           src="./assets/bookmark.svg"
-          width="50px"
-          alt=""
+          alt="Bookmarks"
         />
       </a>
       <a class="footer-link" href="./profile.html">
-        <img class="nav--head" src="./assets/head.svg" width="50px" alt="" />
+        <img class="nav--head" src="./assets/head.svg" alt="Profile" />
       </a>
     </nav>
   </footer>
-  <script defer>
-    // Define image arrays
-    const originalImages = [
-      "images_1/Unicorn_with_apple.webp",
-      "images_1/Unicorn_with_ball.webp",
-      "images_1/Unicorn_with_car.webp",
-      "images_1/Unicorn_with_dog.webp",
-      "images_1/unicorn_with_elephant.webp",
-      "images_1/unicorn_with_fish.webp",
-    ];
-
-    const alternateImages = [
-      "images_2/unicornA.webp",
-      "images_2/unicornB.webp",
-      "images_2/unicornC.webp",
-      "images_2/unicornD.webp",
-      "images_2/unicornE.webp",
-      "images_2/unicornF.webp",
-    ];
-
-    // Function to toggle images
-    function toggleImage(button, index) {
-      const img = button.querySelector("img");
-
-      // Toggle the image source
-      if (img.src.endsWith(originalImages[index])) {
-        img.src = alternateImages[index];
-        img.alt = `Alternate image ${index + 1}`;
-      } else {
-        img.src = originalImages[index];
-        img.alt = `Original image ${index + 1}`;
-      }
-    }
-  </script>
 </html>

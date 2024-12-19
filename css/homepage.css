@@ -1,4 +1,3 @@
-
 /* Header scrolls above cards. */
 .main-header {
   position: sticky;
@@ -29,20 +28,24 @@ h1 {
   );
   margin: 0;
   width: 100%;
+  height: 50px;
 }
 
-/* lets you fix the bookmark within the cards */
 card {
   position: relative;
   justify-self: center;
+  margin-bottom: 2px;
 }
 
+.bookmark {
+  width: 50px;
+}
 /* Column flexbox so each item in cards is stacked upon each other */
 .main-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0px;
+  padding: 30px;
 }
 
 .question-card {
@@ -118,4 +121,10 @@ li.category {
   justify-content: space-evenly;
   margin-top: 2px;
   position: relative;
+}
+.nav--head,
+.nav--house,
+.nav--bookmark
+ {
+  height: 50px;
 }
