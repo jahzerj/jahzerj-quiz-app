@@ -92,16 +92,15 @@ button:hover {
 ul.categories {
   list-style-type: none; /* Remove bullets */
   padding: 0; /* Remove padding */
-  margin: 5px; /* Remove margins */
+  margin: 1px; /* Remove margin */
   align-content: flex-end;
-  bottom: 20px;
 }
 
 li.category {
   border: solid var(--font-color) 2px;
   background-color: var(--primary-color);
   margin: 10px;
-  font-size: 20px;
+  font-size: 16px;
   border-radius: 5px;
   display: inline;
   padding: 1px;
