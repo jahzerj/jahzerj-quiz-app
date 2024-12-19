@@ -1,8 +1,4 @@
-/* Adding div to make maximum length of page. */
-div.wrap {
-  width: 960px;
-  margin: 0 auto;
-}
+
 /* Header scrolls above cards. */
 .main-header {
   position: sticky;
@@ -36,8 +32,9 @@ h1 {
 }
 
 /* lets you fix the bookmark within the cards */
-article {
+card {
   position: relative;
+  justify-self: center;
 }
 
 /* Column flexbox so each item in cards is stacked upon each other */

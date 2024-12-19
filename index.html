@@ -6,89 +6,113 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Unicorn Quiz!</title>
   </head>
-  <body width="600px">
-    <!-- makes the page width fixed -->
-    <div class="wrap"></div>
-    
+  <body width="960px">
     <header class="main-header">
-      <h1>
-        <p class="quiz-name">Unicorn Quiz</p>
-      </h1>
-    </header>     
-    </div>
+      <h1 class="quiz-name">Unicorn Quiz</h1>
+    </header>
     <main class="main-content">
-      <section class="card-section"></section>
-        <article class="question-card --A">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
+      <section class="card-section">
+        <card class="question-card --A">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">Which letter does APPLE start with?</p>
-          <button class="image-button" onclick="toggleImage(this, 0)">
-            <img src="./images_1/Unicorn_with_apple.webp" alt="Unicorn with an apple" class='click-image'>
+          <button class="image-button">
+            <img
+              src="./images_1/Unicorn_with_apple.webp"
+              alt="Unicorn with an apple"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#learning</li>
             <li class="category">#basic</li>
           </ul>
-        </article>
-        <article class="question-card --B">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
+        </card>
+        <card class="question-card --B">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">Which letter does BALL start with?</p>
-          <button class="image-button" onclick="toggleImage(this, 1)">
-              <img src="./images_1/Unicorn_with_ball.webp" alt="Unicorn with a ball" class='click-image'>
+          <button class="image-button">
+            <img
+              src="./images_1/Unicorn_with_ball.webp"
+              alt="Unicorn with a ball"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
             <li class="category">#basic</li>
           </ul>
-        </article>
-        <article class="question-card --C">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
-          <p class="question">Which letter does CAR start with?</p>
-          <button class="image-button" onclick="toggleImage(this, 2)">
-            <img src="./images_1/Unicorn_with_car.webp" alt="Unicorn with a car" class='click-image'>
+        </card>
+        <card class="question-card --C">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <question class="question"
+            >Which letter does CAR start with?</question
+          >
+          <button class="image-button">
+            <img
+              src="./images_1/Unicorn_with_car.webp"
+              alt="Unicorn with a car"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
             <li class="category">#pop-culture</li>
           </ul>
-        </article>
-        <article class="question-card --D">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
-          <p class="question">Which letter does DOG start with?</p>
-          <button class="image-button" onclick="toggleImage(this, 3)">
-          <img src="./images_1/Unicorn_with_dog.webp" alt="Unicorn with a dog" class='click-image'>
+        </card>
+        <card class="question-card --D">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <question class="question"
+            >Which letter does DOG start with?</question
+          >
+          <button class="image-button">
+            <img
+              src="./images_1/Unicorn_with_dog.webp"
+              alt="Unicorn with a dog"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#history</li>
             <li class="category">#funfact</li>
           </ul>
-        </article>
-        <article class="question-card --E">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
-          <p class="question">Which letter does ELEPHANT start with?</p>
-          <button class="image-button" onclick="toggleImage(this, 4)">
-          <img src="./images_1/Unicorn_with_elephant.webp" alt="Unicorn with an elephant" class='click-image'>
+        </card>
+        <card class="question-card --E">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
+          <question class="question"
+            >Which letter does ELEPHANT start with?</question
+          >
+          <button class="image-button">
+            <img
+              src="./images_1/Unicorn_with_elephant.webp"
+              alt="Unicorn with an elephant"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#history</li>
             <li class="category">#funfact</li>
           </ul>
-        </article>
-        <article class="question-card --F">
-          <img class="bookmark" src="./assets/bookmark.svg" width="50px" onclick="toggleBookmark(this, 0)" />
+        </card>
+        <card class="question-card --F">
+          <img class="bookmark" src="./assets/bookmark.svg" width="50px" />
           <p class="question">Which letter does FISH start with?</p>
           <button class="image-button" onclick="toggleImage(this, 5)">
-          <img src="./images_1/Unicorn_with_fish.webp" alt="Unicorn with an elephant" class='click-image'>
+            <img
+              src="./images_1/Unicorn_with_fish.webp"
+              alt="Unicorn with an elephant"
+              class="click-image"
+            />
           </button>
           <ul class="categories">
             <li class="category">#history</li>
             <li class="category">#funfact</li>
           </ul>
-        </article>
+        </card>
       </section>
     </main>
     <script defer>
       // Array to track active cards
-      const activeCards =[];
+      const activeCards = [];
 
       // Function to toggle bookmark and active state
       function toggleBookmark(bookmark, cardIndex) {
@@ -99,35 +123,39 @@
           bookmark.src = "./assets/bookmark-filled.svg";
         } else {
           bookmark.src = "./assets/bookmark.svg";
-        }    
+        }
 
         // Toggle the active state of the card
         if (card.classList.contains("active")) {
           card.classList.remove("active");
 
-        // Remove card index from activeCards
-        const index = activeCards.indexOf(cardIndex);
-        if (index > -1) {
-          activeCards.splice(index, 1);
-        }
-      } else {
-        card.classList.add("active");
+          // Remove card index from activeCards
+          const index = activeCards.indexOf(cardIndex);
+          if (index > -1) {
+            activeCards.splice(index, 1);
+          }
+        } else {
+          card.classList.add("active");
 
-        // Add card index to activeCards
-        if (!activeCards.includes(cardIndex)) {
-          activeCards.push(cardIndex);
+          // Add card index to activeCards
+          if (!activeCards.includes(cardIndex)) {
+            activeCards.push(cardIndex);
+          }
         }
+
+        console.log("Active cards:", activeCards); // Debugging active card indices
       }
-
-      console.log("Active cards:", activeCards); // Debugging active card indices
-
-    }
     </script>
   </body>
   <footer class="main-footer">
     <nav class="footer-nav">
       <a class="footer-link" href="#">
-        <img class="nav--house" src="./assets/house-filled.svg" width="50px" alt="" />
+        <img
+          class="nav--house"
+          src="./assets/house-filled.svg"
+          width="50px"
+          alt=""
+        />
       </a>
       <a class="footer-link" href="./bookmark.html">
         <img
@@ -150,16 +178,16 @@
       "images_1/Unicorn_with_car.webp",
       "images_1/Unicorn_with_dog.webp",
       "images_1/unicorn_with_elephant.webp",
-      "images_1/unicorn_with_fish.webp"
+      "images_1/unicorn_with_fish.webp",
     ];
-  
+
     const alternateImages = [
       "images_2/unicornA.webp",
       "images_2/unicornB.webp",
       "images_2/unicornC.webp",
       "images_2/unicornD.webp",
       "images_2/unicornE.webp",
-      "images_2/unicornF.webp"
+      "images_2/unicornF.webp",
     ];
 
     // Function to toggle images
