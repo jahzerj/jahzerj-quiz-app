@@ -21,7 +21,6 @@ const button = document.querySelector('[data-js="bookmark"]');
 
 document.querySelectorAll(".click-image").forEach((image) => {
   image.addEventListener("click", () => {
-    console.log("Image clicked:", image);
     const currentSrc = image.getAttribute("src");
     const initialSrc = image.getAttribute("data-initial");
     const letterSrc = image.getAttribute("data-letter");
@@ -39,48 +38,16 @@ document.querySelectorAll(".bookmark").forEach((bookmark) => {
     const initialSrc = bookmark.getAttribute("data-initial");
     const toggledSrc = bookmark.getAttribute("data-toggled");
 
-    // Debugging logs
-    console.log("Current Bookmark Src:", currentSrc);
-    console.log(
-      "Switching Bookmark Src to:",
-      currentSrc === initialSrc ? toggledSrc : initialSrc
-    );
-
     // Toggle image source
     bookmark.setAttribute(
       "src",
       currentSrc === initialSrc ? toggledSrc : initialSrc
     );
+
+    //Toggle active state on the parent question card
+    const card = bookmark.closest(".question-card");
+    card.classList.toggle("active");
   });
 });
 
-const activeCards = []; // Store active cards' classes
-
-document.querySelectorAll(".bookmark-image").forEach((bookmark) => {
-  bookmark.addEventListener("click", () => {
-    const parentCard = bookmark.closest(".question-card");
-
-    // Get the unique class, e.g., "--A", "--B"
-    const uniqueClass = Array.from(parentCard.classList).find(cls => cls.startsWith("--"));
-
-    // Toggle active class
-    parentCard.classList.toggle("active");
-
-    // Update activeCards array
-    if (parentCard.classList.contains("active")) {
-      activeCards.push(uniqueClass);
-    } else {
-      const index = activeCards.indexOf(uniqueClass);
-      if (index > -1) {
-        activeCards.splice(index, 1);
-      }
-    }
-
-    // Debugging
-    console.log("Active cards:", activeCards);
-
-    // Update the bookmarks page
-    updateBookmarksPage();
-  });
-});
 
