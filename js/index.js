@@ -31,7 +31,7 @@ document.querySelectorAll(".click-image").forEach((image) => {
   });
 });
 
-/*Toggles the bookmark filled*/
+//Toggles the bookmark filled
 document.querySelectorAll(".bookmark").forEach((bookmark) => {
   bookmark.addEventListener("click", () => {
     const currentSrc = bookmark.getAttribute("src");
@@ -45,9 +45,41 @@ document.querySelectorAll(".bookmark").forEach((bookmark) => {
     );
 
     //Toggle active state on the parent question card
-    const card = bookmark.closest(".question-card");
-    card.classList.toggle("active");
+    const questionCard = bookmark.closest(".question-card");
+    if (questionCard) {
+      questionCard.classList.toggle("active");
+
+      // Save active state to localStorage
+      const cardId = questionCard.dataset.id;
+      const isActive = questionCard.classList.contains("active");
+      const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || {};
+      bookmarks[cardId] = isActive;
+
+    // Save or remove the card's HTML in localStorage
+    if (isActive) {
+      localStorage.setItem(`card-${cardId}`, questionCard.outerHTML);
+    } else {
+      localStorage.removeItem(`card-${cardId}`);
+    }
+
+    localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+    }
   });
 });
 
-
+// Restore bookmark state from localStorage on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const bookmarks = JSON.parse(localStorage.getItem("bookmarks")) || {};
+  Object.entries(bookmarks).forEach(([cardId, isActive]) => {
+    if (isActive) {
+      const questionCard = document.querySelector(`[data-id="${cardId}"]`);
+      if (questionCard) {
+        questionCard.classList.add("active");
+        const bookmark = questionCard.querySelector(".bookmark");
+        if (bookmark) {
+          bookmark.setAttribute("src", bookmark.getAttribute("data-toggled"));
+        }
+      }
+    }
+  });
+});
