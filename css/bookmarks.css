@@ -1,13 +1,14 @@
 #clear-bookmarks {
     position: relative;
-  justify-self: center;
-  font-size: 20px;
-  background-color: var(--secondary-color);
-  text-align: center;
-  height: 160px;
-  width: 320px;
-  margin: 10px;
-  border-radius: 15px;
-  box-shadow: 0px 10px 13px -7px lightcoral;
-  padding: 5px;
+    justify-self: center;
+    font-size: 35px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    height: 160px;
+    width: 320px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 13px -7px lightcoral;
+    padding: 5px;
+    color: var(--font-color);
   }
