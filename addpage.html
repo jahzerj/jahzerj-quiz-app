@@ -11,20 +11,24 @@
       <h1 class="quiz-name">Add Your Own ❔'s</h1>
     </header>
     <main class="main-content-addpage">
-        <form>
+        <form data-js="card-form">
           <div class="form-field">
             <label for="your-question">Your Question:</label> 
-            <textarea id="your-question" name="question" rows="6" maxlength="150" placeholder="Type your question here!"></textarea>
+            <textarea id="your-question" data-js="text-area-question" name="question" rows="6" maxlength="150" placeholder="Type your question here!"></textarea>
             <p class="char-count">0/150 characters left</p>
           </div>
           <div class="form-field">
             <label for="your-answer">Your Answer:</label> 
-            <textarea id="your-answer" name="answer" rows="6" maxlength="150" placeholder="Type your answer here!"></textarea>
+            <textarea id="your-answer" data-js="text-area-answer" name="answer" rows="6" maxlength="150" placeholder="Type your answer here!"></textarea>
             <p class="char-count">0/150 characters left</p>
           </div>
-          <label for="tag">Tag:</label><input id="tag" type="text" />
+          <label for="tag">Tag:</label><input id="tag" data-js="category-tag" name="tag" type="text" />
           <button class="submit-button">Submit</button>
         </form>
+        <section data-js="card-container">
+
+
+        </section>
     </main>
     <script src="./js/add-page.js"></script>
   </body>

@@ -1,3 +1,8 @@
+console.clear();
+
+const form = document.querySelector('[data-js="card-form"]');
+const container = document.querySelector('[data-js="card-container"]');
+
 function addCharCountListeners() {
   const questionTextarea = document.querySelector('textarea[name="question"]');
   const answerTextarea = document.querySelector('textarea[name="answer"]');
@@ -21,3 +26,15 @@ function handleInputEvent(event) {
 }
 
 addCharCountListeners();
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  // Grabbing only the information from my form.
+  const formData = new FormData(event.target);
+  // Converting my info to an Object that we can work with
+  const data = Object.fromEntries(formData);
+
+  console.log("data", data);
+  console.log('Text from my input: ', data['answer']);
+});
