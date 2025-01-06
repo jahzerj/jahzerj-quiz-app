@@ -36,5 +36,54 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
 
   console.log("data", data);
-  console.log('Text from my input: ', data['answer']);
+
+  // Create a new question card
+  const card = document.createElement("card");
+  card.classList.add("question-card");
+
+  // Bookmark
+  const bookmark = document.createElement("img");
+  bookmark.classList.add("bookmark");
+  bookmark.src = "./assets/bookmark.svg";
+  bookmark.setAttribute("data-initial", "./assets/bookmark.svg");
+  bookmark.setAttribute("data-toggled", "./assets/bookmark-filled.svg");
+  bookmark.alt = "Bookmark";
+
+  // Question
+  const questionParagraph = document.createElement("p");
+  questionParagraph.classList.add("question");
+  questionParagraph.textContent = data.question;
+
+  // Answer
+  const answerButton = document.createElement("button");
+  answerButton.classList.add("button");
+  answerButton.textContent = "SHOW THE ANSWER!";
+
+  const answerParagraph = document.createElement("p");
+  answerParagraph.classList.add("answer", "hidden");
+  answerParagraph.textContent = data.answer;
+
+  // Categories
+  const categoryList = document.createElement("ul");
+  categoryList.classList.add("categories");
+
+  const categoryItem = document.createElement("li");
+  categoryItem.classList.add("category");
+  categoryItem.textContent = `#${data.tag}`;
+  categoryList.appendChild(categoryItem);
+
+  // Append elements to the card
+  card.append(
+    bookmark,
+    questionParagraph,
+    answerButton,
+    answerParagraph,
+    categoryList
+  );
+
+  // Add the card to the container
+  container.appendChild(card);
+
+  // Reset the form
+  form.reset();
 });
