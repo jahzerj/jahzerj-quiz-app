@@ -63,9 +63,9 @@ card {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 320px;
+  height: 30%;
   width: 320px;
-  margin: 10px;
+  margin: 20px;
   border-radius: 15px;
   box-shadow: 0px 10px 13px -7px lightcoral;
   padding: 5px;
@@ -86,10 +86,12 @@ button {
   align-self: center;
   background-color: var(--primary-color);
   width: 200px;
-  height: 200px;
+  height: 120px;
   border: none;
   transition: all 0.2s ease-in-out;
   padding: 0px;
+  border-radius: 10px;
+  margin: 10px ;
 }
 
 button:hover {
