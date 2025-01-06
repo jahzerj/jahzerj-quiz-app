@@ -21,19 +21,18 @@ document.querySelectorAll(".bookmark").forEach((bookmark) => {
 // Toggle answer visibility and update button text
 document.querySelectorAll(".button").forEach((button) => {
     button.addEventListener("click", () => {
-      // Find the corresponding answer element
-      const answer = button.nextElementSibling;
+      // Find the parent card element
+      const questionCard = button.closest(".question-card");
   
-      if (answer && answer.classList.contains("answer")) {
+      //find answer element
+      const answer = questionCard.querySelector(".answer");
+  
+      if (answer) {
         // Toggle the "hidden" class
         answer.classList.toggle("hidden");
   
-        // Update button text
-        if (answer.classList.contains("hidden")) {
-          button.textContent = "TAP FOR THE ANSWER!";
-        } else {
-          button.textContent = "HIDE THE ANSWER!";
-        }
+        //change buttons text
+        button.textContent = answer.classList.contains("hidden") ? "TAP FOR THE ANSWER!" : "HIDE THE ANSWER!";
       }
     });
   });
