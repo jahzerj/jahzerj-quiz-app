@@ -6,59 +6,55 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Unicorn Quiz!</title>
   </head>
-  <body>
-    <!-- makes the page width fixed -->
-    <div class="wrap"></div>
+  <body width="960px">
     <header class="main-header">
-      <h1>
-        <p class="quiz-name">Unicorn <br> Quiz</p>
-      </h1>
+      <h1 class="quiz-name">Bookmarks 📖</h1>
     </header>
     <main class="main-content">
-        <article class="question-card --B">
-          <img
-            class="bookmark"
-            src="./assets/bookmark-filled.svg"
-            width="50px"
-          />
+      <section class="card-section">
+        <card class="question-card">
+          <img class="bookmark"
+            src="./assets/bookmark.svg"
+            data-initial="./assets/bookmark-filled.svg"
+            data-toggled="./assets/bookmark.svg"
+            alt="Bookmark" />
           <p class="question">True or False? All unicorns are white.</p>
-          <button class="--B">TAP FOR THE ANSWER!</button>
-          <p class="answer--bookmark">False! unicorns come in many colors!</p>
+          <button class="button">TAP FOR THE ANSWER!</button>
+          <p class="answer">False! unicorns come in many colors!</p>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
             <li class="category">#basic</li>
           </ul>
-        </article>
-        <article class="question-card --C">
-          <img
-            class="bookmark"
-            src="./assets/bookmark-filled.svg"
-            width="50px"
-          />
-          <p class="question">True or False? There are Unicorns in My Little Pony. </p>
-          <button class="--C">TAP FOR THE ANSWER!</button>
-          <p class="answer--bookmark">True! There are at least 10 different unicorns in My Little Pony.</p>
+        </card>
+        <card class="question-card">
+          <img class="bookmark"
+            src="./assets/bookmark.svg"
+            data-initial="./assets/bookmark-filled.svg"
+            data-toggled="./assets/bookmark.svg"
+            alt="Bookmark" />
+            <p class="question">Who first wrote about unicorns?</p>
+            <button class="button">TAP FOR THE ANSWER!</button>
+            <p class="answer--index">The ancient Greeks not only believed unicorns were real, they thought they could be found in India.  </p>
+            <ul class="categories">
+              <li class="category">#history</li>
+              <li class="category">#funfact</li>
+            </ul>
+        </card>
+        <card class="question-card">
+          <img class="bookmark"
+            src="./assets/bookmark.svg"
+            data-initial="./assets/bookmark-filled.svg"
+            data-toggled="./assets/bookmark.svg"
+            alt="Bookmark" />
+          <p class="question">True or False? All unicorns are white.</p>
+          <button class="button">TAP FOR THE ANSWER!</button>
+          <p class="answer">False! unicorns come in many colors!</p>
           <ul class="categories">
             <li class="category">#trueorfalse</li>
-            <li class="category">#pop-culture</li>
+            <li class="category">#basic</li>
           </ul>
-        </article>
-      </article>
-      <article class="question-card --E">
-        <img
-          class="bookmark"
-          src="./assets/bookmark-filled.svg"
-          width="50px"
-        />
-        <p class="question">Which real life animal has a horn like a unicorn?</p>
-        <button class="--E">TAP FOR THE ANSWER!</button>
-        <p class="answer--bookmark">Narwhals!</p>
-        <ul class="categories">
-          <li class="category">#funfact</li>
-          <li class="category">#animals</li>
-        </ul>
-      </article>
-      </section>
+        </card>
+    </section>
     </main>
   </body>
   <footer class="main-footer">
@@ -68,10 +64,10 @@
       </a>
       <a class="footer-link" href="#">
         <img
-          class="nav--bookmark"
-          src="./assets/bookmark-filled.svg"
-          width="50px"
-          alt=""
+        class="nav--bookmark"
+        src="./assets/bookmark-filled.svg"
+        width="50px"
+        alt=""
         />
       </a>
       <a class="footer-link" href="profile.html">
@@ -79,4 +75,5 @@
       </a>
     </nav>
   </footer>
-</html>
+  </html>
+  
