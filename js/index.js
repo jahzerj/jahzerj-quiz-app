@@ -18,12 +18,22 @@ document.querySelectorAll(".bookmark").forEach((bookmark) => {
   });
 });
 
-const answer = document.getElementById('answer');
-const button = document.getElementById('button');
-
+// Toggle answer visibility and update button text
 document.querySelectorAll(".button").forEach((button) => {
-  button.addEventListener("click", () => {
-    answer.classList.toggle('hidden');
-    console.log("clicky");
+    button.addEventListener("click", () => {
+      // Find the corresponding answer element
+      const answer = button.nextElementSibling;
+  
+      if (answer && answer.classList.contains("answer")) {
+        // Toggle the "hidden" class
+        answer.classList.toggle("hidden");
+  
+        // Update button text
+        if (answer.classList.contains("hidden")) {
+          button.textContent = "TAP FOR THE ANSWER!";
+        } else {
+          button.textContent = "HIDE THE ANSWER!";
+        }
+      }
+    });
   });
-});
