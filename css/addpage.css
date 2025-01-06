@@ -5,11 +5,21 @@ form {
   width: 80%;
 }
 
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
 label {
   position: relative;
   left: 0px;
-  margin-top: 50px;
   font-size: 25px;
+}
+
+.char-count {
+  position: relative;
+  align-self: flex-end;
 }
 
 .submit-button {

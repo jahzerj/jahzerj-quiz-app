@@ -12,10 +12,16 @@
     </header>
     <main class="main-content-addpage">
         <form>
-          <label for="your-question">Your Question:</label> 
-          <textarea id="your-question" name="question" rows="6" maxlength="150" placeholder="Type your question here!"></textarea>
-          <label for="your-answer">Your Answer:</label> 
-          <textarea id="your-answer" name="answer" rows="6" maxlength="150" placeholder="Type your answer here!">Type your answer here!</textarea>
+          <div class="form-field">
+            <label for="your-question">Your Question:</label> 
+            <textarea id="your-question" name="question" rows="6" maxlength="150" placeholder="Type your question here!"></textarea>
+            <p class="char-count">0/150</p>
+          </div>
+          <div class="form-field">
+            <label for="your-answer">Your Answer:</label> 
+            <textarea id="your-answer" name="answer" rows="6" maxlength="150" placeholder="Type your answer here!"></textarea>
+            <p class="char-count">0/150</p>
+          </div>
           <label for="tag">Tag:</label><input id="tag" type="text" />
           <button class="submit-button">Submit</button>
         </form>
