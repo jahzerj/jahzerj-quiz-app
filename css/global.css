@@ -4,11 +4,13 @@
   --secondary-color: #f0c1e1;
   --font-color: #fddbbb;
   --accent-color: #fff9bf;
-
-  /* Dark Palette */
-  --primary-color: #8174a0;
-  --secondary-color: #a888b5;
-  --font-color: #efb6c8;
-  --accent-color: #ffd2a0;
 }
 
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #8174a0;
+    --secondary-color: #a888b5;
+    --font-color: #efb6c8;
+    --accent-color: #ffd2a0;
+  }
+}
