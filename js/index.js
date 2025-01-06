@@ -33,7 +33,7 @@ document.querySelectorAll(".button").forEach((button) => {
 
       //change buttons text
       button.textContent = answer.classList.contains("hidden")
-        ? "TAP FOR THE ANSWER!"
+        ? "SHOW THE ANSWER!"
         : "HIDE THE ANSWER!";
     }
   });
