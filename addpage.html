@@ -8,14 +8,29 @@
   </head>
   <body width="960px">
     <header class="main-header">
-      <h1 class="quiz-name">Let's Add Your Own ❔'s</h1>
+      <h1 class="quiz-name">Add Your Own ❔'s</h1>
     </header>
-    <main class="main-content">
-        <form>
-          <label for="your-question">Your Question:</label> <textarea id="your-question" name="question" rows="6" cols="35"></textarea>
-          <label for="your-answer">Your Answer:</label> <textarea id="your-answer" name="answer" rows="6" cols="35"></textarea>
+    <main class="main-content-addpage">
+        <form data-js="card-form">
+          <div class="form-field">
+            <label for="your-question">Your Question:</label> 
+            <textarea id="your-question" data-js="text-area-question" name="question" rows="6" maxlength="150" placeholder="Type your question here!"></textarea>
+            <p class="char-count">0/150 characters left</p>
+          </div>
+          <div class="form-field">
+            <label for="your-answer">Your Answer:</label> 
+            <textarea id="your-answer" data-js="text-area-answer" name="answer" rows="6" maxlength="150" placeholder="Type your answer here!"></textarea>
+            <p class="char-count">0/150 characters left</p>
+          </div>
+          <label for="tag">Tag:</label><input id="tag" data-js="category-tag" name="tag" type="text" />
+          <button class="submit-button">Submit</button>
         </form>
+        <section data-js="card-container">
+
+
+        </section>
     </main>
+    <script src="./js/add-page.js"></script>
   </body>
   <footer class="main-footer">
     <nav class="footer-nav">
@@ -38,5 +53,4 @@
       </a>
     </nav>
   </footer>
-  <script src='./index.js' defer></script>
 </html>
