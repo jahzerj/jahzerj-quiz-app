@@ -1,7 +1,7 @@
 @import "./homepage.css";
 @import "./global.css";
 @import "./profile.css";
-@import "./slider.css";
+
 
 @media screen and (prefers-color-scheme: dark) {
   body {
@@ -12,7 +12,7 @@
 
 @media screen and (prefers-color-scheme: light) {
   body {
-    background-color: #cb9df0;
-    color: #fddbbb;
+    background-color: var(--primary-color);
+    color: var(--font-color);
   }
 }
