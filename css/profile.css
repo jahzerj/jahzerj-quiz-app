@@ -1,10 +1,3 @@
-/* .profile {
-  border-radius: 50%;
-  border: 2px solid rgb(184, 37, 147);
-  position: fixed;
-  width: fit-content;
-} */
-
 .prof-header {
   display: block;
   flex-direction: column;
@@ -42,4 +35,30 @@
   position: fixed;
   bottom: 0px;
   width: 100%;
+}
+
+.about-me {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.stat-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.stat-counter {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.question-count,
+.bookmark-count {
+  border-style: solid;
+  border-color: var(--accent-color);
+  border-radius: 10px;
+  display: flex;
+  width: 25%;
+  justify-content: space-around;
 }
